@@ -4,6 +4,7 @@ git hubにプッシュする
 環境構築完了
 Rails version: 5.2.4.4
 Ruby version: 2.5.8 (x86_64-linux)
+コミット名変更完了
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
