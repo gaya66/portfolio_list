@@ -1,3 +1,72 @@
 // Place all the styles related to the portfolios controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#portfolios-index {
+  .content-wrapper {
+
+    .content-block {
+      display: flex;
+      border: 2px solid #000;
+      padding: 20px;
+      width: 100%;
+      flex-wrap: wrap;
+
+      .content {
+        border: 2px solid #000;
+        padding: 5px;
+        width: 30%;
+        margin: 10px;
+        
+        
+
+        .portfolio-information {
+        
+          .portfolio-image {
+            position: relative;
+            width: 70%;
+            margin : 0 auto
+           }
+
+          .favorite {
+            width: 50px;
+            height: 50px;
+            color: #ffffff;
+            background-color: #2779bd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 100%;
+           }
+            
+        }
+        
+        .user-information {
+          display: flex;
+
+          .user-image {
+            width: 20%;
+          }
+
+          .overview {
+            margin-left: 15px;
+            margin-top: 6px;
+
+            .portfolio-title {
+              font-weight: bold;
+            }
+
+            .user-name {
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
