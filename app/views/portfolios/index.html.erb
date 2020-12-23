@@ -1,0 +1,33 @@
+<div class="content-wrapper">
+  <div class="content-block">
+    <% (1..10).each do |i| %>
+      <div class="content">
+        <div class="portfolio-information">
+          <div class="portfolio-image">
+            <div class="favorite">
+              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+            </div>
+            <%= image_tag "thumbnail.JPG" %>
+          </div>
+          
+        </div>
+        <div class="user-information">
+          <div class="user-image">
+            <%= image_tag "user.JPG" %>
+          </div>
+          <div class="overview">
+            <div class="portfolio-title">
+              作品タイトル
+            </div>
+            <div class="user-name">
+              ユーザーネーム
+            </div>
+            <div class="posted date">
+              投稿日
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
