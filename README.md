@@ -5,6 +5,7 @@ git hubにプッシュする
 Rails version: 5.2.4.4
 Ruby version: 2.5.8 (x86_64-linux)
 コミット名変更完了
+スライド式サイドバーの実装。
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
