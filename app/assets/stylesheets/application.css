@@ -65,6 +65,18 @@ body {
     height: 60px!important;
     overflow: hidden;
     z-index: 10;
+    display: flex;
+}
+
+.logo {
+  margin-top: 15px;
+  margin-left: 55px;
+  font-size: 20px;
+}
+
+.link {
+  margin: 15px 10px 0px auto;
+  font-size: 20px;
 }
 
 /* .main {
