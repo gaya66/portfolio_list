@@ -4,22 +4,27 @@
 
 #portfolios-index {
   .content-wrapper {
+    // max-width: 1080px;
+    // margin: 0 auto;
+    // margin-top: 120px;
 
     .content-block {
       display: flex;
-      border: 2px solid #000;
-      padding: 20px;
-      width: 100%;
+      // border: 2px solid #000;
+      // padding: 20px;
+      // width: 100%; 
       flex-wrap: wrap;
+      margin-top: 60px;
+      // margin: 60 auto;
+      margin-left: 251px;
+      // justify-content: space-between;
 
       .content {
         border: 2px solid #000;
-        padding: 5px;
+        border-radius: 20px;
         width: 30%;
-        margin: 10px;
+        margin: 12px;
         
-        
-
         .portfolio-information {
         
           .portfolio-image {
@@ -62,7 +67,7 @@
             }
 
             .user-name {
-
+              font-weight: bold;
             }
           }
         }
