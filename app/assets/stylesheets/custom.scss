@@ -1,0 +1,103 @@
+// 新custom.scss
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// img {
+//   max-width: 100%;
+// }
+
+header {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  height: 56px;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .toglle {
+    padding: 8px;
+    margin-right: 16px;
+    .toglle-faIcon {
+      font-size: 24px;
+    }
+  }
+  .logo {
+    .logo-img {
+      width: 80px;
+    }
+  }
+  .search {
+    flex: 1;
+    text-align: center;
+    .search-wrapper {
+      height: 32px;
+      font-size: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      .search-input {
+        height: 100%;
+        width: 556px;
+        border: solid 1px rgb(204,204,204);
+        font-size: 16px; //スマホサイズだと画面が拡大してしまうため16pxに指定する。
+      }
+      .serach-btn {
+        height: 100%;
+        width: 65px;
+        border: solid 1px rgb(204,204,204);
+        background-color: #fff9f9;
+      }
+      .search-faIcon {
+        color: #8e7777
+      }
+    }
+  }
+  .camera {
+    height: 45px;
+    width: 45px;
+    padding: 0px 0px 3px 0px;
+    margin-right: 5px;
+    .camera-img {
+      height: 100%;
+      object-fit: contain; // 画像が見切れることなく表示される
+    }
+  }
+  .tool {
+    padding: 8px;
+    .tool-faIcon {
+      font-size: 24px;
+    }
+  }
+  .notice {
+    padding: 8px;
+    .notice-faIcon {
+      font-size: 24px;
+    }
+  }
+  .icon {
+    height: 40px;
+    width: 60px;
+    padding: 1px 6px;
+    .user-img {
+      height: 100%;
+      object-fit: contain;
+      text-align: center;
+    }
+  }
+
+
+}
+
+main { 
+  background-color: rgb(60, 60, 128);
+  height: 150vh;
+  margin-top: 56px;
+}

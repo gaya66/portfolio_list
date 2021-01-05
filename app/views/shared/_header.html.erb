@@ -1,40 +1,28 @@
-<!-- <div id="header">
+<header>
+  <div class="toglle">
+    <i class="fas fa-bars toglle-faIcon"></i>
+  </div>
   <div class="logo">
-    <a href="/">ロゴ</a>
+    <%= image_tag 'icon.jpg', class: 'logo-img' %>
   </div>
-  <div class="link">
-    <ul id="nav">
-      <li>
-        <a href="#">メニュー１</a>
-      </li>
-      <li>
-        <a href="#"> メニュー２</a>
-      </li>
-      <li>
-        <a href="#">メニュー３</a>
-      </li>
-    </ul>
+  <div class="search">
+    <div class="search-wrapper">
+      <input type="text" class="search-input" placeholder="検索">
+      <button class="serach-btn">
+        <i class="fas fa-search search-faIcon"></i>
+      </button>
+    </div>
   </div>
-</div> -->
-
-
-<div class="header">  
-  <div class="logo">Portfolio_List</div>
-  <div class="link">リンク</div>
-</div>
-  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-  <label for="openSidebarMenu" class="sidebarIconToggle">
-    <div class="spinner diagonal part-1"></div>
-    <div class="spinner horizontal"></div>
-    <div class="spinner diagonal part-2"></div>
-  </label>
-  <div id="sidebarMenu">
-    <ul class="sidebarMenuInner">
-      <li>Jelena Jovanovic <span>Web Developer</span></li>
-      <li><a href="https://vanila.io" target="_blank">Company</a></li>
-      <li><a href="https://instagram.com/plavookac" target="_blank">Instagram</a></li>
-      <li><a href="https://twitter.com/plavookac" target="_blank">Twitter</a></li>
-      <li><a href="https://www.youtube.com/channel/UCDfZM0IK6RBgud8HYGFXAJg" target="_blank">YouTube</a></li>
-      <li><a href="https://www.linkedin.com/in/plavookac/" target="_blank">Linkedin</a></li>
-    </ul>
+  <div class="camera">
+    <%= image_tag "camera.jpg", class: "camera-img" %>
   </div>
+  <div class="tool">
+    <i class="fas fa-tools tool-faIcon"></i>
+  </div>
+  <div class="notice">
+    <i class="far fa-bell notice-faIcon"></i>
+  </div>
+  <div class="icon">
+    <%= image_tag 'user.JPG', class: 'user-img' %>
+  </div>
+</header>

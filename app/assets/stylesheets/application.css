@@ -14,42 +14,18 @@
  *= require_self
  */
 
-img {
+/* img {
   max-width: 100%;
-}
-
-/* body {
-  max-width: 1080px;
-  margin: 0 auto;
 } */
 
- /* #header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
- }
-
- #header #nav {
-   list-style: none;
-   display: flex;
- }
-
- #header #nav li {
-  text-align: center;
- }
-
- #header #nav li a {
-  padding: 10px;
- } */
-
- /* headerのcss */
-@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+ /* 旧ヘッダーデザイン */
+/* @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 html, body {
     overflow-x: hidden;
     height: 100%;
 }
 body {
-    background: #fff;
+    background: rgb(253, 253, 253);
     padding: 0;
     margin: 0;
     font-family: 'Varela Round', sans-serif;
@@ -66,6 +42,9 @@ body {
     overflow: hidden;
     z-index: 10;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 .logo {
@@ -77,9 +56,10 @@ body {
 .link {
   margin: 15px 10px 0px auto;
   font-size: 20px;
+  margin-right: 10px;
 }
 
-/* .main {
+.main {
     margin: 0 auto;
     display: block;
     height: 100%;
@@ -97,7 +77,8 @@ body {
     font-size: 3em;
     font-weight: bold;
     letter-spacing: 1.25px;
-} */
+}
+
 
 #sidebarMenu {
     height: 100%;
@@ -201,8 +182,103 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     box-sizing: border-box;
     transform: rotate(-135deg);
     margin-top: -9px;
+} */
+
+
+/* .header {
+  background-color: rgb(226, 137, 137);
+}
+.navbar {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+.navbar li {
+  margin-left: 2rem;
+}
+.navber a {
+  color: white;
+} */
+
+/* 新レイアウト */
+
+/* body {
+  margin: 0;
+  display: flex;
+  font-size: 2rem;
+  min-height: 100vh;
+  height: 1000px;
 }
 
- /* #footer {
-  text-align: center;
- } */
+main {
+  width: 700px;
+  margin: 0 auto;
+}
+aside {
+  width: 20%;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+
+  .side-footer {
+    margin-top: auto;
+    height: 300px;
+  }
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.open,
+.close {
+  display: none;
+}
+input[type="checkbox"] {
+  position: absolute;
+  left: -50vw;
+}
+
+
+@media screen and (max-width: 1000px) {
+  main {
+      width: 100%;
+      padding-top: 50px;
+  }
+  
+  .open,
+  .close {
+      display: block;
+  }
+  .open {
+      position: absolute;
+  }
+  aside {
+      position: absolute;
+      left: -250px;
+      height: 100%;
+      transition: all 0.2s;
+      background: #ffffff;
+  }
+  input[type="checkbox"]:checked ~ aside {
+      left: 0;
+      top: 0px;
+  }
+
+  input[type="checkbox"]:checked ~ .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8) !important;
+  }
+  
+} */
