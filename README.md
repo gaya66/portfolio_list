@@ -7,7 +7,7 @@ Ruby version: 2.5.8 (x86_64-linux)
 コミット名変更完了
 スライド式サイドバーの実装。
 固定headerのデザイン変更
-
+Font Awesome使用
 
 This README would normally document whatever steps are necessary to get the
 application up and running.

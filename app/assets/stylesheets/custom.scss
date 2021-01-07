@@ -107,17 +107,65 @@ header {
   height: 100vh;
   display: flex;
   flex-direction: row;
-  .side-bar {
-    overflow-y: scroll;
+  .sideBar {
+    overflow-y: scroll; // はみ出た部分をスクロール
     width: 240px;
-    .side-bar-wrapper {
+    .sideBar-wrapper {
       height: 150vh;
-      background-color: rgb(228, 56, 13);
+      background-color: rgb(255, 255, 255);
       width: 100%;
+      .sideBar-item {
+        .sideBar-item-title {
+          padding: 8px 24px;
+          height: 37px;
+        }
+        .sideBar-item-element {
+          padding: 0 24px;
+          height: 40px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          cursor: pointer;
+          .sideBar-item-element-faIcon {
+            font-size: 24px;
+            margin-right: 24px;
+          }
+          .sideBar-item-element-label {
+            font-size: 14px;
+          }
+        }
+        .sideBar-item-element:hover {
+          background-color: rgba(0,0,0,0.1);
+        }
+        // sideBar-itemの余白
+        .sideBar-divider {
+          background-color: gray;
+          height: 1px;
+          width: 100%;
+          opacity: 0.5; // 透明度
+          margin: 16px 0;
+        }
+        .sideBar-foot {
+          padding: 16px 24px;
+          .sideBar-foot-links {
+            margin-bottom: 16px;
+            .sideBar-foot-links-link {
+              text-decoration: none;
+              color: grey;
+              font-size: 13px;
+              margin-right: 8px;
+            }
+          }
+          .sidebar-foot-copyright {
+            color: gray;
+            font-size: 13px;
+          }
+        }
+      }
     }
   }
   main {
-    overflow-y: scroll;
+    overflow-y: scroll; // はみ出た部分をスクロール
     background-color: rgb(60, 60, 128);
     flex: 1;
     .main-wrapper {
