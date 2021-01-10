@@ -1,5 +1,3 @@
-// 新custom.scss
-
 // デフォルトでかかっている要素を消すため
 * {
   padding: 0;
@@ -27,6 +25,7 @@ header {
   .toglle {
     padding: 8px;
     margin-right: 16px;
+    
     .toglle-faIcon {
       font-size: 24px;
     }
@@ -39,12 +38,14 @@ header {
   .search {
     flex: 1;
     text-align: center;
+
     .search-wrapper {
       height: 32px;
       font-size: 0px;
       display: flex;
       flex-direction: row;
       justify-content: center;
+
       .search-input {
         height: 100%;
         width: 556px;
@@ -67,6 +68,7 @@ header {
     width: 45px;
     padding: 0px 0px 3px 0px;
     margin-right: 5px;
+
     .camera-img {
       height: 100%;
       object-fit: contain; // 画像が見切れることなく表示される
@@ -74,6 +76,7 @@ header {
   }
   .tool {
     padding: 8px;
+
     .tool-faIcon {
       font-size: 24px;
       color: #545353;
@@ -81,6 +84,7 @@ header {
   }
   .notice {
     padding: 8px;
+
     .notice-faIcon {
       font-size: 24px;
       color: #545353;
@@ -91,6 +95,7 @@ header {
     width: 60px;
     padding: 1px 6px;
     border-radius: 20px;
+
     .user-img {
       height: 100%;
       object-fit: contain;
@@ -100,20 +105,46 @@ header {
   }
 }
 
-// sidebarのcssとmainの表示領域の確保。
+// sidebarのopenのClose
+.open {
+  position: absolute;
+  top: 10px;
+  left: 24px;
+  font-size: 24px;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  left: -50vw;
+}
+input[type="checkbox"]:checked ~ .sideBar {
+  position: absolute;
+        left: -240px;
+}
+// input[type="checkbox"]:checked ~ .back {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   background: rgba(0, 0, 0, 0.8) !important;
+// }
+
+// sidebarのデザインとmainの表示領域の確保。
 .wrapper {
   margin-top: 56px;
   background-color: rgb(237, 237, 250);
   height: 100vh;
   display: flex;
   flex-direction: row;
+
   .sideBar {
     overflow-y: scroll; // はみ出た部分をスクロール
     width: 240px;
+
     .sideBar-wrapper {
       height: 150vh;
       background-color: rgb(255, 255, 255);
       width: 100%;
+
       .sideBar-item {
         .sideBar-item-title {
           padding: 8px 24px;
@@ -126,6 +157,7 @@ header {
           flex-direction: row;
           align-items: center;
           cursor: pointer;
+
           .sideBar-item-element-faIcon {
             font-size: 24px;
             margin-right: 24px;
@@ -147,8 +179,10 @@ header {
         }
         .sideBar-foot {
           padding: 16px 24px;
+
           .sideBar-foot-links {
             margin-bottom: 16px;
+
             .sideBar-foot-links-link {
               text-decoration: none;
               color: grey;
@@ -168,16 +202,9 @@ header {
     overflow-y: scroll; // はみ出た部分をスクロール
     background-color: rgb(60, 60, 128);
     flex: 1;
+
     .main-wrapper {
       height: 150vh;
     }
   }
 }
-
-
-// 仮main css
-// main { 
-//   background-color: rgb(60, 60, 128);
-//   height: 150vh;
-//   margin-top: 56px;
-// }
