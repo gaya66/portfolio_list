@@ -25,6 +25,7 @@ header {
   .toglle {
     padding: 8px;
     margin-right: 16px;
+    opacity: 0;
     
     .toglle-faIcon {
       font-size: 24px;
@@ -48,9 +49,10 @@ header {
 
       .search-input {
         height: 100%;
-        width: 556px;
+        max-width: 556px;
         border: solid 1px rgb(204,204,204);
         font-size: 16px; // スマホサイズだと画面が拡大してしまうため16pxに指定する。
+        width: 100%;
       }
       .serach-btn {
         height: 100%;
@@ -63,7 +65,7 @@ header {
       }
     }
   }
-  .camera {
+  /*.camera {
     height: 45px;
     width: 45px;
     padding: 0px 0px 3px 0px;
@@ -89,7 +91,7 @@ header {
       font-size: 24px;
       color: #545353;
     }
-  }
+  } */
   .icon {
     height: 40px;
     width: 60px;
@@ -105,22 +107,8 @@ header {
   }
 }
 
-// sidebarのopenのClose
-.open {
-  position: absolute;
-  top: 10px;
-  left: 24px;
-  font-size: 24px;
-}
 
-input[type="checkbox"] {
-  position: absolute;
-  left: -50vw;
-}
-input[type="checkbox"]:checked ~ .sideBar {
-  position: absolute;
-        left: -240px;
-}
+
 // input[type="checkbox"]:checked ~ .back {
 //   position: absolute;
 //   width: 100%;
@@ -135,11 +123,27 @@ input[type="checkbox"]:checked ~ .sideBar {
   height: 100vh;
   display: flex;
   flex-direction: row;
-
+  
+   // sidebarのopenのClose
+  .sideBar-open-toglle {
+    position: fixed; // body ウィンドウ画面が基準で固定。
+    top: 1px;
+    left: 16px;
+    font-size: 24px;
+    padding: 8px;
+  }
+  input[type="checkbox"] {
+    position: absolute; // 最も近い親要素の位置に対して絶対的
+    left: -50vw;
+  }
+  input[type="checkbox"]:checked ~ .sideBar {
+    position: absolute;
+    left: -240px;
+  }
   .sideBar {
     overflow-y: scroll; // はみ出た部分をスクロール
     width: 240px;
-
+    
     .sideBar-wrapper {
       height: 150vh;
       background-color: rgb(255, 255, 255);
@@ -205,6 +209,55 @@ input[type="checkbox"]:checked ~ .sideBar {
 
     .main-wrapper {
       height: 150vh;
+    }   
+  }
+}
+
+// 下タブ用に非表示にしている。
+.footer {
+  display: none;
+}
+// 幅が768までは以下cssが適用される。
+@media screen and (max-width: 768px) {
+  .toglle {
+    display: none;
+  }
+  .sideBar-open-toglle {
+    display: none;
+  }
+  .sideBar {
+    position: absolute;
+    left: -240px;
+  }
+  input[type="checkbox"]:checked ~ .sideBar {
+    position: absolute;
+          left: 0px;
+  }
+  .footer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    .footer-wrapper {
+      .footer-item {
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        text-align: center;
+        .footer-item-element {
+          flex: 1;
+          // align-items: center;
+          // justify-content: center;
+          .footer-item-element-faIcon {}
+          .footer-item-element-label {}
+          .sideBar-open-footer-toglle {
+            font-size: 24px;
+            // padding-left: 25px;
+            text-align: center
+          }
+        }
+      }
     }
   }
 }
