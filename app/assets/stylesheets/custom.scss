@@ -5,9 +5,9 @@
   box-sizing: border-box;
 }
 
-// img {
-//   max-width: 100%;
-// }
+/*img {
+  max-width: 100%;
+}*/
 
 // 固定header
 header {
@@ -25,7 +25,7 @@ header {
   .toglle {
     padding: 8px;
     margin-right: 16px;
-    opacity: 0;
+    // opacity: 0;
     
     .toglle-faIcon {
       font-size: 24px;
@@ -95,7 +95,7 @@ header {
   .icon {
     height: 40px;
     width: 60px;
-    padding: 1px 6px;
+    padding: 1px 6px 1px 6px;
     border-radius: 20px;
 
     .user-img {
@@ -107,14 +107,31 @@ header {
   }
 }
 
+// sidebarのopenのClose（_sidebar.html.erb）
+.sideBar-open-toglle {
+  position: fixed; // body ウィンドウ画面が基準で固定。
+  top: 1px;
+  left: 16px;
+  font-size: 24px;
+  padding: 8px;
+}
+input[type="checkbox"] {
+  position: absolute; // 最も近い親要素の位置に対して絶対的
+  left: -50vw;
+}
+input[type="checkbox"]:checked ~ .sideBar {
+  position: absolute;
+  left: -240px;
+}
+
+/* input[type="checkbox"]:checked ~ .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8) !important;
+} */
 
 
-// input[type="checkbox"]:checked ~ .back {
-//   position: absolute;
-//   width: 100%;
-//   height: 100%;
-//   background: rgba(0, 0, 0, 0.8) !important;
-// }
 
 // sidebarのデザインとmainの表示領域の確保。
 .wrapper {
@@ -124,22 +141,6 @@ header {
   display: flex;
   flex-direction: row;
   
-   // sidebarのopenのClose
-  .sideBar-open-toglle {
-    position: fixed; // body ウィンドウ画面が基準で固定。
-    top: 1px;
-    left: 16px;
-    font-size: 24px;
-    padding: 8px;
-  }
-  input[type="checkbox"] {
-    position: absolute; // 最も近い親要素の位置に対して絶対的
-    left: -50vw;
-  }
-  input[type="checkbox"]:checked ~ .sideBar {
-    position: absolute;
-    left: -240px;
-  }
   .sideBar {
     overflow-y: scroll; // はみ出た部分をスクロール
     width: 240px;
@@ -213,7 +214,7 @@ header {
   }
 }
 
-// 下タブ用に非表示にしている。
+// 下タブ用に通常は非表示にしている。
 .footer {
   display: none;
 }
@@ -225,36 +226,56 @@ header {
   .sideBar-open-toglle {
     display: none;
   }
+  .logo {
+    margin-right: 15px;
+  }
+  .icon {
+    padding: 0;
+  }
   .sideBar {
-    position: absolute;
+    position: fixed;
     left: -240px;
+    height: 100%;
   }
   input[type="checkbox"]:checked ~ .sideBar {
-    position: absolute;
-          left: 0px;
+    position: fixed;
+    left: 0px;
   }
+  input[type="checkbox"]:checked ~ .back {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8) !important;
+  } 
   .footer {
     display: block;
     position: fixed;
     bottom: 0;
     width: 100%;
+    height: 48px;
 
     .footer-wrapper {
+      background-color: white;
+
       .footer-item {
         display: flex;
         align-items: center;
-        // justify-content: center;
-        text-align: center;
+
         .footer-item-element {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
           flex: 1;
-          // align-items: center;
-          // justify-content: center;
-          .footer-item-element-faIcon {}
+          font-size: 12px;
+
+          .footer-item-element-faIcon {
+            font-size: 26px;
+          }
           .footer-item-element-label {}
           .sideBar-open-footer-toglle {
-            font-size: 24px;
-            // padding-left: 25px;
-            text-align: center
+            font-size: 32px;
+            // opacity: 0;
+          
           }
         }
       }
