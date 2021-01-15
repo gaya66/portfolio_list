@@ -1,0 +1,284 @@
+// デフォルトでかかっている要素を消すため
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*img {
+  max-width: 100%;
+}*/
+
+// 固定header
+header {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  height: 56px;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .toglle {
+    padding: 8px;
+    margin-right: 16px;
+    // opacity: 0;
+    
+    .toglle-faIcon {
+      font-size: 24px;
+    }
+  }
+  .logo {
+    .logo-img {
+      width: 80px;
+    }
+  }
+  .search {
+    flex: 1;
+    text-align: center;
+
+    .search-wrapper {
+      height: 32px;
+      font-size: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      .search-input {
+        height: 100%;
+        max-width: 556px;
+        border: solid 1px rgb(204,204,204);
+        font-size: 16px; // スマホサイズだと画面が拡大してしまうため16pxに指定する。
+        width: 100%;
+      }
+      .serach-btn {
+        height: 100%;
+        width: 65px;
+        border: solid 1px rgb(204,204,204);
+        background-color: #fff9f9;
+      }
+      .search-faIcon {
+        color: #8e7777
+      }
+    }
+  }
+  /*.camera {
+    height: 45px;
+    width: 45px;
+    padding: 0px 0px 3px 0px;
+    margin-right: 5px;
+
+    .camera-img {
+      height: 100%;
+      object-fit: contain; // 画像が見切れることなく表示される
+    }
+  }
+  .tool {
+    padding: 8px;
+
+    .tool-faIcon {
+      font-size: 24px;
+      color: #545353;
+    }
+  }
+  .notice {
+    padding: 8px;
+
+    .notice-faIcon {
+      font-size: 24px;
+      color: #545353;
+    }
+  } */
+  .icon {
+    height: 40px;
+    width: 60px;
+    padding: 1px 6px 1px 6px;
+    border-radius: 20px;
+
+    .user-img {
+      height: 100%;
+      object-fit: contain;
+      text-align: center;
+      border-radius: 20px;
+    }
+  }
+}
+
+// sidebarのopenのClose（_sidebar.html.erb）
+.sideBar-open-toglle {
+  position: fixed; // body ウィンドウ画面が基準で固定。
+  top: 1px;
+  left: 16px;
+  font-size: 24px;
+  padding: 8px;
+}
+input[type="checkbox"] {
+  position: absolute; // 最も近い親要素の位置に対して絶対的
+  left: -50vw;
+}
+input[type="checkbox"]:checked ~ .sideBar {
+  position: absolute;
+  left: -240px;
+}
+
+/* input[type="checkbox"]:checked ~ .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8) !important;
+} */
+
+
+
+// sidebarのデザインとmainの表示領域の確保。
+.wrapper {
+  margin-top: 56px;
+  background-color: rgb(237, 237, 250);
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  
+  .sideBar {
+    overflow-y: scroll; // はみ出た部分をスクロール
+    width: 240px;
+    
+    .sideBar-wrapper {
+      height: 150vh;
+      background-color: rgb(255, 255, 255);
+      width: 100%;
+
+      .sideBar-item {
+        .sideBar-item-title {
+          padding: 8px 24px;
+          height: 37px;
+        }
+        .sideBar-item-element {
+          padding: 0 24px;
+          height: 40px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          cursor: pointer;
+
+          .sideBar-item-element-faIcon {
+            font-size: 24px;
+            margin-right: 24px;
+          }
+          .sideBar-item-element-label {
+            font-size: 14px;
+          }
+        }
+        .sideBar-item-element:hover {
+          background-color: rgba(0,0,0,0.1);
+        }
+        // sideBar-itemの余白
+        .sideBar-divider {
+          background-color: gray;
+          height: 1px;
+          width: 100%;
+          opacity: 0.5; // 透明度
+          margin: 16px 0;
+        }
+        .sideBar-foot {
+          padding: 16px 24px;
+
+          .sideBar-foot-links {
+            margin-bottom: 16px;
+
+            .sideBar-foot-links-link {
+              text-decoration: none;
+              color: grey;
+              font-size: 13px;
+              margin-right: 8px;
+            }
+          }
+          .sidebar-foot-copyright {
+            color: gray;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+  main {
+    overflow-y: scroll; // はみ出た部分をスクロール
+    // background-color: rgb(60, 60, 128);
+    flex: 1;
+
+    .main-wrapper {
+      height: 150vh;
+    }   
+  }
+}
+
+// 下タブ用に通常は非表示にしている。
+.footer {
+  display: none;
+}
+// 幅が768までは以下cssが適用される。
+@media screen and (max-width: 768px) {
+  .toglle {
+    display: none;
+  }
+  .sideBar-open-toglle {
+    display: none;
+  }
+  .logo {
+    margin-right: 15px;
+  }
+  .icon {
+    padding: 0;
+  }
+  .sideBar {
+    position: fixed;
+    left: -240px;
+    height: 100%;
+  }
+  input[type="checkbox"]:checked ~ .sideBar {
+    position: fixed;
+    left: 0px;
+  }
+  input[type="checkbox"]:checked ~ .back {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8) !important;
+  } 
+  .footer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 48px;
+
+    .footer-wrapper {
+      background-color: white;
+
+      .footer-item {
+        display: flex;
+        align-items: center;
+
+        .footer-item-element {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          flex: 1;
+          font-size: 12px;
+
+          .footer-item-element-faIcon {
+            font-size: 26px;
+          }
+          .footer-item-element-label {}
+          .sideBar-open-footer-toglle {
+            font-size: 32px;
+            // opacity: 0;
+          
+          }
+        }
+      }
+    }
+  }
+}
