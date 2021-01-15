@@ -205,7 +205,7 @@ input[type="checkbox"]:checked ~ .sideBar {
   }
   main {
     overflow-y: scroll; // はみ出た部分をスクロール
-    background-color: rgb(60, 60, 128);
+    // background-color: rgb(60, 60, 128);
     flex: 1;
 
     .main-wrapper {
