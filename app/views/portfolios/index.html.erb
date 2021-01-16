@@ -1,36 +1,37 @@
-<div>
-  ここにmainのコンテンツが入る。
-</div>
-  <!-- <div class="content-wrapper">
-  <div class="content-block">
-    <% (1..10).each do |i| %>
-      <div class="content">
-        <div class="portfolio-information">
-          <div class="portfolio-image">
+<div class="portfolios-index">
+  <div class="content-wrapper">
+    <div class="content-block">
+      <% (1..10).each do |i| %>
+        <div class="content">
+          <div class="portfolio-information">
+            <div class="portfolio-image">
+              <%= image_tag "thumbnail.JPG" , class: "portfolio-image-icon" %>
+            </div>
+            
+          </div>
+          <div class="user-information">
+            <div class="user-image">
+              <%= image_tag "user.JPG" , class: "user-image-icon" %>
+            </div>
+            <div class="overview">
+              <div class="portfolio-title">
+                作品タイトル<%= i %>
+              </div>
+              <div class="user-name">
+                ユーザーネーム
+              </div>
+              <div class="posted date">
+                投稿日
+              </div>
+            </div>
             <div class="favorite">
-              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-            </div>
-            <%= image_tag "thumbnail.JPG" %>
-          </div>
-          
-        </div>
-        <div class="user-information">
-          <div class="user-image">
-            <%= image_tag "user.JPG" %>
-          </div>
-          <div class="overview">
-            <div class="portfolio-title">
-              作品タイトル<%= i %>
-            </div>
-            <div class="user-name">
-              ユーザーネーム
-            </div>
-            <div class="posted date">
-              投稿日
+              <button class="favorite-btn">
+                <i class="favorite-icon">いいね</i>
+              </button>
             </div>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
-</div> -->
+</div>
