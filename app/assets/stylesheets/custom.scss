@@ -5,9 +5,9 @@
   box-sizing: border-box;
 }
 
-// img {
-//   max-width: 100%;
-// }
+img {
+  max-width: 100%;
+}
 
 // 固定header
 header {
@@ -32,6 +32,7 @@ header {
     }
   }
   .logo {
+    margin-right: 15px;
     .logo-img {
       width: 80px;
     }
@@ -200,7 +201,6 @@ input[type="checkbox"]:checked ~ .sideBar {
     background-color: rgb(250, 245, 245);
     flex: 1;
     margin-top: 56px;
-
     .main-wrapper {
       height: 150vh;
     }   
@@ -212,7 +212,7 @@ input[type="checkbox"]:checked ~ .sideBar {
   display: none;
 }
 // 幅が768までは以下cssが適用される。
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 575px) {
   .toglle {
     display: none;
   }
