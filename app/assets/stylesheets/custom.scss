@@ -202,7 +202,7 @@ input[type="checkbox"]:checked ~ .sideBar {
     flex: 1;
     margin-top: 56px;
     .main-wrapper {
-      height: 150vh;
+      // height: 150vh;
     }   
   }
 }
@@ -213,6 +213,9 @@ input[type="checkbox"]:checked ~ .sideBar {
 }
 // 幅が768までは以下cssが適用される。
 @media screen and (max-width: 575px) {
+  main {
+    margin-bottom: 48px;
+  }
   .toglle {
     display: none;
   }
