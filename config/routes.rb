@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  get 'users/index'
   root 'portfolios#index'
-  root 'portfolios#show'
-
-  resources :portfolios do
-  end
+  devise_for :users
+  resources :users, :only => [:index, :show]
+  resources :portfolios
+  # root 'portfolios#show'
+  # end
 end
