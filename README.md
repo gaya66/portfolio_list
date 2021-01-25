@@ -8,6 +8,7 @@ Ruby version: 2.5.8 (x86_64-linux)
 スライド式サイドバーの実装。
 固定headerのデザイン変更
 Font Awesome使用
+devise導入
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
