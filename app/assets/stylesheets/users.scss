@@ -1,3 +1,62 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#users-show {
+  max-width: 1284px;
+  width: 100%;
+  margin: auto;
+  .header {
+    background-color: rgb(238, 121, 121);
+    display: flex;
+    align-items: center;
+
+    .user-icon {
+      width: 80px;
+      height: 80px;
+      margin-right: 24px;
+      
+      .user-image-icon {
+        border-radius: 50%;
+      }
+    }
+    .user-name {
+      font-size: 20px;
+    }
+  }
+  .content-block {
+    .content {
+      max-width: 310px;
+      border: 1px solid #000;
+      border-radius: 20px;
+
+      .portfolio-image {
+        .portfolio-image-icon {}
+      }
+      .information {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .overview {
+          padding-left: 10px;
+          .portfolio-title {
+            font-size: 16px;
+          }
+          .portfolio-posted-date {
+            font-size: 14px;
+          }
+        }
+        .favorite {
+          padding: 10px 10px 0 0;
+          .favorite-btn {
+            .favorite-icon {}
+          }
+        }
+      }
+      
+    }
+  }
+  .skill {}
+  .career {}
+}

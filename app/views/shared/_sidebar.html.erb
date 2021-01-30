@@ -8,14 +8,19 @@
   <div class="sideBar-wrapper">
     <div class="sideBar-item">
       <div class="sideBar-item-title">UserIconとUserName</div>
-      <div class="sideBar-item-element">
-        <i class="fas fa-home fa-fw sideBar-item-element-faIcon"></i>
-        <span class="sideBar-item-element-label"><%= link_to "ホーム", root_path %></span>
-      </div>
-      <div class="sideBar-item-element">
-        <i class="fas fa-user fa-fw sideBar-item-element-faIcon"></i>
-        <span class="sideBar-item-element-label">マイページ</span>
-      </div>
+      <%= link_to "ユーザー一覧", users_path %>
+      <%= link_to root_path, class: 'cancel_style' do %>
+        <div class="sideBar-item-element">
+            <i class="fas fa-home fa-fw sideBar-item-element-faIcon"></i>
+            <span class="sideBar-item-element-label">ホーム</span>
+        </div>
+      <% end %>
+      <%= link_to user_path(current_user.id), class: 'cancel_style' do %>
+        <div class="sideBar-item-element">
+          <i class="fas fa-user fa-fw sideBar-item-element-faIcon"></i>
+          <span class="sideBar-item-element-label">マイページ</span>
+        </div>
+        <% end %>
       <div class="sideBar-item-element">
         <i class="fas fa-plus fa-fw sideBar-item-element-faIcon"></i>
         <span class="sideBar-item-element-label">作品投稿</span>

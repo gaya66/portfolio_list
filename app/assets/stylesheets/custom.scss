@@ -9,6 +9,12 @@ img {
   max-width: 100%;
 }
 
+// link_toのスタイルを打ち消すため
+.cancel_style {
+  text-decoration: none;
+  color: #000000;
+}
+
 // 固定header
 header {
   position: fixed;

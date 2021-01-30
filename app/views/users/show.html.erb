@@ -1,2 +1,31 @@
-<!-- <% provide(:title, @user.name) %> -->
-<h1>My page (<%= @user.name %>)</h1>
+<% provide(:title, @user.name) %>
+<div id="users-show">
+  <div class="header">
+    <div class ="user-icon">
+      <%= image_tag "user.JPG" , class: "user-image-icon" %>
+    </div>
+    <div class="user-name">
+      <%= @user.name %>
+    </div>
+  </div>
+  <div class="content-block">
+    <div class="content">
+      <div class="portfolio-image">
+        <%= image_tag "thumbnail.JPG" , class: "portfolio-image-icon" %>
+      </div>
+      <div class="information">
+        <div class="overview">
+          <div class="portfolio-title">タイトル</div>
+          <div class="portfolio-posted-date">投稿日</div>
+        </div>
+        <div class="favorite">
+          <button class="favorite-btn">
+            <i class="favorite-icon">いいね</i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="skill">スキル</div>
+  <div class="career">経歴</div>
+</div>
