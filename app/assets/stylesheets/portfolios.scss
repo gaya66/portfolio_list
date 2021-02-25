@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.portfolios-index {
+#portfolios-index {
   .content-wrapper {
     // max-width: 1080px;
     // margin: 0 auto;
@@ -17,6 +17,8 @@
         border: 1px solid #000;
         border-radius: 20px;
         margin: 20px 40px;
+        max-width: 33.3%;
+        padding: 8px;
         
         .portfolio-information {
           .portfolio-image {
@@ -28,9 +30,10 @@
         }
         .user-information {
           display: flex;
+          align-items: center;
 
           .user-image {
-            height: 60px;
+            width: 80px;
 
             .user-image-icon {
               height: 100%;
@@ -67,7 +70,7 @@
   }
 }
 
-.portfolios-show {
+#portfolios-show {
   .content-wrapper {
     .content-block {
       text-align: center;

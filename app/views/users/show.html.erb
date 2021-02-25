@@ -1,6 +1,7 @@
 <% provide(:title, @user.name) %>
-<div id="users-show">
-  <div class="header">
+
+<div class="user-show-header">
+  <div class="header-nav">
     <div class ="user-icon">
       <%= image_tag "user.JPG" , class: "user-image-icon" %>
     </div>
@@ -8,24 +9,35 @@
       <%= @user.name %>
     </div>
   </div>
+</div>
+
+<div class="users-show-content">
   <div class="content-block">
-    <div class="content">
-      <div class="portfolio-image">
-        <%= image_tag "thumbnail.JPG" , class: "portfolio-image-icon" %>
-      </div>
-      <div class="information">
-        <div class="overview">
-          <div class="portfolio-title">タイトル</div>
-          <div class="portfolio-posted-date">投稿日</div>
+    <% (1..10).each do |i| %>
+      <div class="content">
+        <div class="portfolio-image">
+          <%= image_tag "thumbnail.JPG" , class: "portfolio-image-icon" %>
         </div>
-        <div class="favorite">
-          <button class="favorite-btn">
-            <i class="favorite-icon">いいね</i>
-          </button>
+        <div class="information">
+          <div class="overview">
+            <div class="portfolio-title">タイトル<%= i %></div>
+            <div class="portfolio-posted-date">投稿日</div>
+          </div>
+          <div class="favorite">
+            <button class="favorite-btn">
+              <i class="favorite-icon">いいね</i>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    <% end %>
   </div>
-  <div class="skill">スキル</div>
-  <div class="career">経歴</div>
+  <div class="skill">
+    <div class="skill-title">スキル</div>
+    <div class="skill-content">ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー</div>
+  </div>
+  <div class="career">
+    <div class="career-title">経歴</div>
+    <div class="career-content">ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー</div>
+  </div>
 </div>

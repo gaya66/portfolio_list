@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :portfolios
+
   # 現在のパスワードを入力しなくてもユーザー情報を更新できるようにするため。
   def update_without_current_password(params, *options)
     params.delete(:current_password)

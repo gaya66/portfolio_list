@@ -6,7 +6,7 @@
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
 }
 
 // link_toのスタイルを打ち消すため
@@ -14,6 +14,12 @@ img {
   text-decoration: none;
   color: #000000;
 }
+
+// div {
+//   white-space: nowrap;
+//   overflow: hidden;
+// }
+
 
 // 固定header
 header {
@@ -132,8 +138,8 @@ input[type="checkbox"]:checked ~ .sideBar {
 
 // sidebarのデザインとmainの表示領域の確保。
 .wrapper {
-  // margin-top: 56px; 
-  background-color: rgb(237, 237, 250);
+  // background-color: rgb(237, 237, 250);
+  background-color: rgb(240, 242, 245);
   height: 100vh;
   display: flex;
   flex-direction: row;
@@ -204,12 +210,14 @@ input[type="checkbox"]:checked ~ .sideBar {
   }
   main {
     overflow-y: scroll; // はみ出た部分をスクロール
-    background-color: rgb(250, 245, 245);
+    // background-color: rgb(240, 242, 245);
     flex: 1;
     margin-top: 56px;
-    .main-wrapper {
-      // height: 150vh;
-    }   
+
+    // height: 150vh;
+    // .main-wrapper {
+    //   height: 150vh;
+    // }   
   }
 }
 
@@ -274,7 +282,7 @@ input[type="checkbox"]:checked ~ .sideBar {
           .footer-item-element-faIcon {
             font-size: 26px;
           }
-          .footer-item-element-label {}
+          .footer-item-element-label 
           .sideBar-open-footer-toglle {
             font-size: 32px;
           }
