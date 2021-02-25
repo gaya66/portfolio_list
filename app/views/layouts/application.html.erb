@@ -17,11 +17,9 @@
     <div class="wrapper">
       <%= render 'shared/sidebar' %>
       <main id='<%= controller.controller_name %>-<%= controller.action_name %>'>
-        <!-- <div class="main-wrapper"> -->
-          <%= render 'shared/toast' %>
-          <%= yield %>
-          <%= render 'shared/footer'%>
-        <!-- </div> -->
+        <%= render 'shared/toast' %>
+        <%= yield %>
+        <%= render 'shared/footer'%>
       </main>
     </div>
   </body>
