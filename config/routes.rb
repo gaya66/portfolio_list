@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-
+  
+  
   root 'portfolios#index'
-  root 'portfolios#show'
+  
+  devise_for :users , controllers: { registrations: 'registrations' }  # 現在のパスワードを入力しなくても更新できるようにするため
+  resources :users, :only => [:index, :show]
+  resources :portfolios
 
-  resources :portfolios do
-  end
 end

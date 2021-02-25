@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.portfolios-index {
+#portfolios-index {
   .content-wrapper {
     // max-width: 1080px;
     // margin: 0 auto;
@@ -10,32 +10,18 @@
 
     .content-block {
       display: flex;
-      // border: px solid #000;
-      // padding: 20px;
-      // width: auto; 
       flex-wrap: wrap;
-      // height: auto;
-      // margin-top: 68px;
-      // margin: 60 auto;
-      // margin-left: 251px;
       // justify-content: space-between;
-      
 
       .content {
         border: 1px solid #000;
         border-radius: 20px;
         margin: 20px 40px;
-        // width: 335px;
-        // width: 30%;
-        // margin: 12px;
-        // max-width: 30%;
-        // min-width: 30%;
+        max-width: 33.3%;
+        padding: 8px;
         
         .portfolio-information {
           .portfolio-image {
-            // position: relative;
-            // width: 70%;
-            // margin : 0 auto
             .portfolio-image-icon {
               width: 335px;
               border-bottom: 1px solid;
@@ -44,18 +30,12 @@
         }
         .user-information {
           display: flex;
+          align-items: center;
 
           .user-image {
-            // width: 20%;
-            // height: 36px;
-            // height: 48px;
-            // padding: 1px 6px 1px 6px;
-            height: 60px;
+            width: 80px;
+
             .user-image-icon {
-              // width: 36px;
-              // height: 36px;
-              // height: 48px;
-              // text-align: center;
               height: 100%;
               object-fit: contain;
               border-radius: 35px;
@@ -63,7 +43,6 @@
           }
           .overview {
             margin-left: 15px;
-            // margin-top: 6px;
             flex: 1;
 
             .portfolio-title {
@@ -91,55 +70,7 @@
   }
 }
 
-@media screen and (max-width: 575px) {
-  .portfolios-index {
-    .content-wrapper {
-      .content-block {
-        padding: 1px;
-        .content {
-          margin: 0;
-          // width: 320px;
-          width: 100%;
-
-          .portfolio-information {
-            .portfolio-image {
-              .portfolio-image-icon {
-                // width: 320px;
-                height: 180px;
-                width: 100%;
-              }
-            }
-          }
-          .user-information {
-            .user-image {
-              .user-image-icon {
-              }
-            }
-            .overview {
-              .portfolio-title {
-                font-size: 14px;
-              }
-              .user-name {
-                font-size: 12px;
-              }
-              .posted-date {
-                font-size: 12px;
-              }
-            }
-            .favorite {
-              .favorite-btn {
-                .favorite-icon {  
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-.portfolios-show {
+#portfolios-show {
   .content-wrapper {
     .content-block {
       text-align: center;
@@ -208,3 +139,52 @@
     }
   }
 }
+
+@media screen and (max-width: 575px) {
+  .portfolios-index {
+    .content-wrapper {
+      .content-block {
+        padding: 1px;
+        .content {
+          margin: 0;
+          // width: 320px;
+          width: 100%;
+
+          .portfolio-information {
+            .portfolio-image {
+              .portfolio-image-icon {
+                // width: 320px;
+                height: 180px;
+                width: 100%;
+              }
+            }
+          }
+          .user-information {
+            .user-image {
+              .user-image-icon {
+              }
+            }
+            .overview {
+              .portfolio-title {
+                font-size: 14px;
+              }
+              .user-name {
+                font-size: 12px;
+              }
+              .posted-date {
+                font-size: 12px;
+              }
+            }
+            .favorite {
+              .favorite-btn {
+                .favorite-icon {  
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

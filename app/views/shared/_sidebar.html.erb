@@ -8,7 +8,55 @@
   <div class="sideBar-wrapper">
     <div class="sideBar-item">
       <div class="sideBar-item-title">UserIconとUserName</div>
-      <div class="sideBar-item-element">
+      <%= link_to "ユーザー一覧", users_path %>
+      <%= link_to root_path, class: 'cancel_style' do %>
+        <div class="sideBar-item-element">
+          <i class="fas fa-home fa-fw sideBar-item-element-faIcon"></i>
+          <span class="sideBar-item-element-label">ホーム</span>
+        </div>
+      <% end %>
+      <% if user_signed_in? %>  <!-- deviseのメソッドで、「ログインしているかしていないかでtrue or falseを返す」メソッド -->
+        <%= link_to user_path(current_user.id), class: 'cancel_style' do %>
+          <div class="sideBar-item-element">
+            <i class="fas fa-user fa-fw sideBar-item-element-faIcon"></i>
+            <span class="sideBar-item-element-label">マイページ</span>
+          </div>
+        <% end %>
+        <%= link_to new_portfolio_path, class: 'cancel_style' do %>
+          <div class="sideBar-item-element">
+            <i class="fas fa-plus fa-fw sideBar-item-element-faIcon"></i>
+            <span class="sideBar-item-element-label">作品投稿</span>
+          </div>
+        <% end %>
+        <%= link_to "#", class: 'cancel_style' do %>
+          <div class="sideBar-item-element">
+            <i class="fas fa-star fa-fw sideBar-item-element-faIcon"></i>
+            <span class="sideBar-item-element-label">お気に入り一覧</span>
+          </div>
+        <% end %>
+      <% else %>
+        <%= link_to new_user_session_path, class: 'cancel_style' do %>
+          <div class="sideBar-item-element">
+            <i class="fas fa-user fa-fw sideBar-item-element-faIcon"></i>
+            <span class="sideBar-item-element-label">マイページ</span>
+          </div>
+        <% end %>
+        <%= link_to new_user_session_path, class: 'cancel_style' do %>
+          <div class="sideBar-item-element">
+            <i class="fas fa-plus fa-fw sideBar-item-element-faIcon"></i>
+            <span class="sideBar-item-element-label">作品投稿</span>
+          </div>
+        <% end %>
+        <%= link_to new_user_session_path, class: 'cancel_style' do %>
+          <div class="sideBar-item-element">
+            <i class="fas fa-star fa-fw sideBar-item-element-faIcon"></i>
+            <span class="sideBar-item-element-label">お気に入り一覧</span>
+          </div>
+        <% end %>
+      <% end %>
+      
+      <div class="sideBar-divider"></div>
+      <!-- <div class="sideBar-item-element">
         <i class="fas fa-home fa-fw sideBar-item-element-faIcon"></i>
         <span class="sideBar-item-element-label">ホーム</span>
       </div>
@@ -24,24 +72,7 @@
         <i class="fas fa-star fa-fw sideBar-item-element-faIcon"></i>
         <span class="sideBar-item-element-label">お気に入り一覧</span>
       </div>
-      <div class="sideBar-divider"></div>
-      <div class="sideBar-item-element">
-        <i class="fas fa-home fa-fw sideBar-item-element-faIcon"></i>
-        <span class="sideBar-item-element-label">ホーム</span>
-      </div>
-      <div class="sideBar-item-element">
-        <i class="fas fa-user fa-fw sideBar-item-element-faIcon"></i>
-        <span class="sideBar-item-element-label">マイページ</span>
-      </div>
-      <div class="sideBar-item-element">
-        <i class="fas fa-plus fa-fw sideBar-item-element-faIcon"></i>
-        <span class="sideBar-item-element-label">作品投稿</span>
-      </div>
-      <div class="sideBar-item-element">
-        <i class="fas fa-star fa-fw sideBar-item-element-faIcon"></i>
-        <span class="sideBar-item-element-label">お気に入り一覧</span>
-      </div>
-      <div class="sideBar-divider"></div>
+      <div class="sideBar-divider"></div> -->
       <div class="sideBar-foot">
         <div class="sideBar-foot-links">
           <a href="#" class="sideBar-foot-links-link">ここにリンクが入ります</a>

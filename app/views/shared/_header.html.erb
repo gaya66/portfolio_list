@@ -3,7 +3,7 @@
     <i class="fas fa-bars toglle-faIcon"></i>
   </div>
   <div class="logo">
-    <%= image_tag 'icon.jpg', class: 'logo-img' %>
+    <%= link_to image_tag('icon.jpg', class: 'logo-img'), root_path %>
   </div>
   <div class="search">
     <div class="search-wrapper">
@@ -23,7 +23,14 @@
     <i class="far fa-bell notice-faIcon"></i>
   </div> -->
   <div class="icon">
-    <%= image_tag 'user.JPG', class: 'user-img' %>
+    <% if user_signed_in? %>
+      <%= image_tag 'user.JPG', class: 'user-img' %>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      <%= link_to 'プロフィール変更', edit_user_registration_path %>
+    <% else %>
+      <%= link_to "ログイン", new_user_session_path %>
+      <%= link_to "新規登録", new_user_registration_path %>
+    <% end %>
   </div>
 </header>
 

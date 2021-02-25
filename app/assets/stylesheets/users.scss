@@ -1,0 +1,92 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#users-show {
+  .user-show-header {
+    background-color: rgb(249, 249, 249);
+  
+    .header-nav {
+      display: flex;
+      align-items: center;
+      margin: auto;
+      max-width: 900px;
+  
+      .user-icon {
+        width: 80px;
+        height: 80px;
+        margin-right: 24px;
+        
+        .user-image-icon {
+          border-radius: 50%;
+        }
+      }
+      .user-name {
+        font-size: 20px;
+      }
+    }
+  }
+  .users-show-content {
+    max-width: 900px;
+    margin: auto;
+
+    .content-block {
+      display: flex;
+      flex-wrap: wrap;
+
+      .content {
+        max-width: 33.3%;
+        padding: 8px;
+  
+        .portfolio-image {
+          background-color: #fdfdfd;
+          border-radius: 10px 10px 0px 0px;
+          .portfolio-image-icon {
+            border-radius: 10px 10px 0px 0px;
+          }
+        }
+        .information {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 16px;
+          background-color: rgb(253, 253, 253);
+          border-radius: 0 0 10px 10px;
+  
+          .overview {
+            padding-left: 10px;
+            
+            .portfolio-title {
+              font-size: 16px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: clip;
+            }
+            .portfolio-posted-date {
+              font-size: 14px;
+            }
+          }
+          .favorite {
+            padding: 10px 10px 0 0;
+            .favorite-btn {
+              .favorite-icon {}
+            }
+          }
+        }
+        
+      }
+    }
+    .skill {
+      padding: 8px;
+      .skill-title {
+        font-size: 2.2em;
+      }
+    }
+    .career {
+      padding: 8px;
+      .career-title {
+        font-size: 2.2em;
+      }
+    }
+  }
+}
