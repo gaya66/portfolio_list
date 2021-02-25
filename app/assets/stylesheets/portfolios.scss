@@ -3,34 +3,38 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #portfolios-index {
-  .content-wrapper {
+  .portfolios-index-content {
     // max-width: 1080px;
     // margin: 0 auto;
     // margin-top: 120px;
-
+    max-width: 900px;
+    margin: auto;
     .content-block {
       display: flex;
       flex-wrap: wrap;
       // justify-content: space-between;
-
       .content {
-        border: 1px solid #000;
-        border-radius: 20px;
-        margin: 20px 40px;
+        // border: 1px solid #000;
+        // border-radius: 20px;
+        // margin: 20px 40px;
+        // max-width: 33.3%;
+        // padding: 8px;
         max-width: 33.3%;
         padding: 8px;
-        
-        .portfolio-information {
-          .portfolio-image {
-            .portfolio-image-icon {
-              width: 335px;
-              border-bottom: 1px solid;
-            }
+        .portfolio-image {
+          border-radius: 10px 10px 0px 0px;
+          background-color: #fdfdfd;
+          .portfolio-image-icon {
+            // width: 335px;
+            // border-bottom: 1px solid;
+            border-radius: 10px 10px 0px 0px;
           }
         }
         .user-information {
           display: flex;
           align-items: center;
+          background-color: rgb(253, 253, 253);
+          border-radius: 0 0 10px 10px;
 
           .user-image {
             width: 80px;
@@ -187,4 +191,3 @@
     }
   }
 }
-
