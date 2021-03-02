@@ -15,11 +15,10 @@ img {
   color: #000000;
 }
 
-// div {
-//   white-space: nowrap;
-//   overflow: hidden;
-// }
-
+h2 {
+  color: rgb(101, 103, 107);
+  padding: 0px 8px;
+}
 
 // 固定header
 header {
@@ -225,6 +224,7 @@ input[type="checkbox"]:checked ~ .sideBar {
 .footer {
   display: none;
 }
+
 // 幅が768までは以下cssが適用される。
 @media screen and (max-width: 575px) {
   main {
@@ -267,6 +267,7 @@ input[type="checkbox"]:checked ~ .sideBar {
 
     .footer-wrapper {
       background-color: white;
+      height: 48px;
 
       .footer-item {
         display: flex;

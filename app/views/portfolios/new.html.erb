@@ -1,1 +1,23 @@
-投稿用ページ
+<div class="portfolios-new-content">
+  <h2>ポートフォリオ投稿</h2>
+  <%= form_with(scope: :portfolio, url: "#", local: true, class: "form-block") do |f| %>
+  
+    <%= f.label :portfolio_image, "ポートフォリオの画像", class: "label-login" %>
+    <%= f.file_field :portfolio_image, class: 'form-control' %>
+
+    <%= f.label :video_url, "YoutubeURL", class: "label-login" %>
+    <%= f.url_field :video_url, class: 'form-control' %>
+
+    <%= f.label :portfolio_url, "ポートフォリオのURL", class: "label-login" %>
+    <%= f.url_field :portfolio_url, class: 'form-control' %>
+
+    <%= f.label :title, "作品タイトル", class: "label-login" %>
+    <%= f.text_field :title, class: 'form-control' %>
+
+    <%= f.label :description, "作品説明", class: "description" %>
+    <%= f.text_area :description, class: 'description-area' %>
+    
+    <%= f.submit "投稿", class: "submit-btn" %>
+  <% end %>
+</div>
+

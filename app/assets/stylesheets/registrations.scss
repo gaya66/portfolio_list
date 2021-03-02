@@ -1,3 +1,34 @@
 // Place all the styles related to the registrations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// プロフィール変更画面
+#registrations-edit {
+  max-width: 900px;
+  margin: auto;
+
+  .field {}
+  .actions {
+    .update-btn {
+      width: 149px;
+    }
+  }
+  .delete {
+    padding-top: 40px;
+    .delete-btn {
+      width: 149px;
+    }
+  }
+}
+
+// アカウント作成画面
+#registrations-new {
+  max-width: 900px;
+  margin: 90px auto;
+  .field {}
+  .actions {
+    .actions-btn {
+      width: 149px;
+    }
+  }
+}
