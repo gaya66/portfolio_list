@@ -1,0 +1,24 @@
+// Place all the styles related to the registrations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#sessions-new {
+  max-width: 900px;
+  margin: 90px auto;
+  .field {
+    .remember-field {
+      .check_box {
+        position: static;
+      }
+      .remember_me_label {
+        font-size: 11px;
+      }
+    }
+    
+  }
+  .actions {
+    .actions-btn {
+      width: 149px;
+    }
+  }
+}
