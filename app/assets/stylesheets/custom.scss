@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+li {
+  list-style: none;
+}
+
 img {
   width: 100%;
 }
@@ -29,9 +33,11 @@ header {
   height: 56px;
   padding-left: 16px;
   padding-right: 16px;
+  padding-top: 8px;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  // align-items: center;
+  // text-align: center;
 
   .toglle {
     padding: 8px;
@@ -43,17 +49,18 @@ header {
     }
   }
   .logo {
-    margin-right: 15px;
+    // margin-right: 15px;
+    margin-left: 10px;
     .logo-img {
       width: 80px;
     }
   }
   .search {
     flex: 1;
-    text-align: center;
+    // text-align: center;
 
     .search-wrapper {
-      height: 32px;
+      height: 37px;
       font-size: 0px;
       display: flex;
       flex-direction: row;
@@ -104,18 +111,94 @@ header {
       color: #545353;
     }
   } */
-  .icon {
-    height: 40px;
-    width: 60px;
-    padding: 1px 6px 1px 6px;
+  
+  
+  .dropdown {
+    &:hover .sub-list {
+      display: block;
+    }
+    .list {
+      margin: 0 0 0 auto;
+      height: 40px;
+      width: 60px;
+      padding: 1px 6px 1px 6px;
+      
+      .user-img {
+        height: 100%;
+        object-fit: contain;
+        text-align: center;
+        border-radius: 20px;
+      }
+    }
+    .sub-list {
+      position: absolute;
+      z-index: 1;
+      display: none;
+      background-color: #fafafa;
+      width: 200px;
+      height: 80px;
+      right: 0px;
+      top: 56px;
 
-    .user-img {
-      height: 100%;
-      object-fit: contain;
-      text-align: center;
-      border-radius: 20px;
+      .sub-list-item {
+        height: 40px;
+        padding: 9px 24px;
+
+        &:hover {
+          background-color: rgba(0,0,0,0.1);
+          cursor: pointer;
+        }
+      }
     }
   }
+  
+
+  // #icon {
+  //   margin-top: 30px;
+  //   background-color: white;
+  //   .icon-menu {
+  //     width: 150px;
+  //     // text-align: center;
+  //     .icon-menu-title {
+  //       // background: #090032;
+        
+  //     }
+      
+  //     .icon-sub-menu {
+  //       display: none;
+  //       // background: #B9B9B9;
+  //       position: relative;
+  //       ul {
+  //         list-style: none;
+  //         margin: 0;
+  //         padding: 0;
+  //         width: 300px;
+  //         li {
+  //           a {
+  //             text-decoration: none;
+  //             color: #ffffff;
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  // .icon-menu:hover .icon-sub-menu {
+  //   display: inline-block;
+  // }
+
+  // #icon {
+    // height: 40px;
+    // width: 60px;
+    // padding: 1px 6px 1px 6px;
+
+    // .user-img {
+      // height: 100%;
+      // object-fit: contain;
+      // text-align: center;
+      // border-radius: 20px;
+    // }
+  // }
 }
 
 // sidebarのopenのClose（_sidebar.html.erb）

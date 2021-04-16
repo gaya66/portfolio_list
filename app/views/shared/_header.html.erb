@@ -1,6 +1,6 @@
 <header>
   <div class="toglle">
-    <i class="fas fa-bars toglle-faIcon"></i>
+    <!-- <i class="fas fa-bars toglle-faIcon"></i> -->
   </div>
   <div class="logo">
     <%= link_to image_tag('icon.jpg', class: 'logo-img'), root_path %>
@@ -13,8 +13,19 @@
       </button>
     </div>
   </div>
+  <div class="dropdown">
+    <div class="list">
+      <%= image_tag 'user.JPG', class: 'user-img' %>
+    </div>
+    <div class="sub-list">
+        <div class="sub-list-item"><%= link_to "プロフィール変更", edit_user_registration_path, class: 'cancel_style' %></div>
+        <div class="sub-list-item"><%= link_to "ログアウト", destroy_user_session_path, class: 'cancel_style', method: :delete %></div>
+  　</div>
+  </div>
+
+
   <!-- <div class="camera">
-    <%= image_tag "camera.jpg", class: "camera-img" %>
+    <%#= image_tag "camera.jpg", class: "camera-img" %>
   </div>
   <div class="tool">
     <i class="fas fa-tools tool-faIcon"></i>
@@ -22,16 +33,30 @@
   <div class="notice">
     <i class="far fa-bell notice-faIcon"></i>
   </div> -->
-  <div class="icon">
-    <% if user_signed_in? %>
-      <%= image_tag 'user.JPG', class: 'user-img' %>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-      <%= link_to 'プロフィール変更', edit_user_registration_path %>
-    <% else %>
-      <%= link_to "ログイン", new_user_session_path %>
-      <%= link_to "新規登録", new_user_registration_path %>
-    <% end %>
-  </div>
+  <!-- <div class="dropdown">
+    <div class="menu">
+      <div class="menu-title">Menu1</div>
+      <div class="sub-menu">
+        <ul>
+          <li><a href="#">Sub Menu1</a></li>
+          <li><a href="#">Sub Menu1</a></li>
+          <li><a href="#">Sub Menu1</a></li>
+        </ul>
+      </div>
+    </div> 
+  </div>-->
+
+    <!-- <li><%#= image_tag 'user.JPG', class: 'user-img' %></li>
+    <ul>
+      <li></li>
+      <li><</li>
+    </ul>
+    <%# if user_signed_in? %> -->
+    <%# else %>
+      <%#= link_to "ログイン", new_user_session_path %>
+      <%#= link_to "新規登録", new_user_registration_path %>
+    <%# end %>
 </header>
+
 
 
