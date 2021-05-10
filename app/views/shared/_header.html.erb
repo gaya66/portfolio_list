@@ -13,15 +13,26 @@
       </button>
     </div>
   </div>
-  <div class="dropdown">
-    <div class="list">
-      <%= image_tag 'user.JPG', class: 'user-img' %>
+  <% if user_signed_in? %> 
+    <div class="dropdown">
+      <div class="list">
+        <%= image_tag 'user.JPG', class: 'user-img' %>
+      </div>
+      <div class="sub-list">
+        <%= link_to edit_user_registration_path, class: 'cancel_style' do %>
+          <div class="sub-list-item">プロフィール変更</div>
+        <% end %>
+        <%= link_to destroy_user_session_path, class: 'cancel_style', method: :delete do %>
+          <div class="sub-list-item">ログアウト</div>
+        <% end %>
+    　</div>
     </div>
-    <div class="sub-list">
-        <div class="sub-list-item"><%= link_to "プロフィール変更", edit_user_registration_path, class: 'cancel_style' %></div>
-        <div class="sub-list-item"><%= link_to "ログアウト", destroy_user_session_path, class: 'cancel_style', method: :delete %></div>
-  　</div>
-  </div>
+  <% else %>
+    <div class="menu">
+      <%= link_to "ログイン", new_user_session_path, class: 'cancel_style' %>
+      <%= link_to "新規登録", new_user_registration_path, class: 'cancel_style' %>
+    </div>
+  <% end %>
 
 
   <!-- <div class="camera">
@@ -33,18 +44,6 @@
   <div class="notice">
     <i class="far fa-bell notice-faIcon"></i>
   </div> -->
-  <!-- <div class="dropdown">
-    <div class="menu">
-      <div class="menu-title">Menu1</div>
-      <div class="sub-menu">
-        <ul>
-          <li><a href="#">Sub Menu1</a></li>
-          <li><a href="#">Sub Menu1</a></li>
-          <li><a href="#">Sub Menu1</a></li>
-        </ul>
-      </div>
-    </div> 
-  </div>-->
 
     <!-- <li><%#= image_tag 'user.JPG', class: 'user-img' %></li>
     <ul>
@@ -57,6 +56,3 @@
       <%#= link_to "新規登録", new_user_registration_path %>
     <%# end %>
 </header>
-
-
-
